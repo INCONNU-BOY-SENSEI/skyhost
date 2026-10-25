@@ -102,6 +102,16 @@ skyhost rollback           # back to the previous version
 
 Full list: [docs/cli.md](docs/cli.md).
 
+## Deploy button for your project
+
+Maintain an open-source app or bot? Add this to your README and anyone can deploy it in one click:
+
+```markdown
+[![Deploy on SKYHOST](https://skyhost.tech/deploy-button.svg)](https://skyhost.tech/deploy?repo=https://github.com/OWNER/REPO)
+```
+
+[![Deploy on SKYHOST](assets/deploy-button.svg)](https://skyhost.tech/deploy?repo=https://github.com/INCONNU-BOY-SENSEI/skyhost) → [docs/deploy-button.md](docs/deploy-button.md)
+
 ## Use the API
 
 Create an API key in **[Account → API keys](https://skyhost.tech/account?tab=apikeys)**, then:
@@ -148,6 +158,7 @@ console.log((await res.json()).deployment.status);
 | [App configuration](docs/configuration.md) | Ports, runtimes, Dockerfiles, variables, workers, cron, deploy strategies |
 | [Databases](docs/databases.md) | Create, connect, back up and restore |
 | [Custom domains](docs/domains.md) | DNS records and HTTPS |
+| [Deploy button](docs/deploy-button.md) | One-click deploy links for your open-source projects |
 | [CI/CD](docs/ci-cd.md) | GitHub Actions, deploy hooks, API keys |
 | [Webhooks](docs/webhooks.md) | Events and signature verification |
 | [Troubleshooting](docs/troubleshooting.md) | 502, build errors, crash loops |

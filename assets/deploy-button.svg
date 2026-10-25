@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="40" viewBox="0 0 212 40" role="img" aria-label="Deploy on SKYHOST">
+  <title>Deploy on SKYHOST</title>
+  <rect width="212" height="40" rx="9" fill="#0A0A0A"/>
+  <g transform="translate(13 9)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 19h11.5a5 5 0 0 0 .6-9.96A7 7 0 0 0 5.2 10.6 4.3 4.3 0 0 0 6.5 19z"/>
+    <path d="M12 16v-6m0 0-2.6 2.6M12 10l2.6 2.6"/>
+  </g>
+  <text x="45" y="25.5" fill="#fff" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing=".1">Deploy on <tspan font-weight="800" letter-spacing=".4">SKYHOST</tspan></text>
+</svg>
