@@ -1,0 +1,15 @@
+{
+  "name": "skyhost-cli",
+  "version": "1.0.0",
+  "description": "SKYHOST command line interface — deploy, logs, variables and databases from your terminal.",
+  "homepage": "https://skyhost.tech",
+  "repository": { "type": "git", "url": "git+https://github.com/INCONNU-BOY-SENSEI/skyhost.git" },
+  "bugs": { "url": "https://github.com/INCONNU-BOY-SENSEI/skyhost/issues" },
+  "author": "SYRIX VISION COMPANY",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "skyhost": "cli/dist/skyhost.js" },
+  "files": ["cli/dist/skyhost.js", "README.md", "LICENSE"],
+  "engines": { "node": ">=18.17" },
+  "keywords": ["skyhost", "paas", "hosting", "deploy", "cli"]
+}

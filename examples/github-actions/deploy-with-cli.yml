@@ -1,0 +1,21 @@
+name: Deploy to SKYHOST
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install the SKYHOST CLI
+        run: npm install -g github:INCONNU-BOY-SENSEI/skyhost
+      - name: Deploy
+        env:
+          SKYHOST_TOKEN: ${{ secrets.SKYHOST_TOKEN }}
+        run: |
+          skyhost login --token "$SKYHOST_TOKEN"
+          skyhost link --project "my-app" --service "my-app" --environment production
+          skyhost deploy

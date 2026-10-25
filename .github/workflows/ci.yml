@@ -1,0 +1,32 @@
+name: CLI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  cli:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cli
+    strategy:
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: dist/skyhost.js matches the source
+        if: matrix.node == 22
+        run: git diff --exit-code -- dist/skyhost.js || (echo "Run 'npm run build' in cli/ and commit dist/skyhost.js" && exit 1)
+      - run: node dist/skyhost.js --version
+  installer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh -n install.sh

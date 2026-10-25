@@ -1,0 +1,10 @@
+{
+  "name": "skyhost-whatsapp-bot",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node bot.js" },
+  "dependencies": {
+    "@whiskeysockets/baileys": "6.7.19",
+    "qrcode-terminal": "0.12.0"
+  }
+}
